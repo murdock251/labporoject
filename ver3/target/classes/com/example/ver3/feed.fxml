@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ver3.controllers.FeedController">
+    <top>
+        <VBox BorderPane.alignment="CENTER">
+            <children>
+                <!-- Menu Bar -->
+                <MenuBar>
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#handleLogout" text="Logout" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Actions">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#handleRefresh" text="Refresh Feed" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+
+                <!-- Top Bar with Welcome and Buttons -->
+                <HBox alignment="CENTER_LEFT" spacing="15.0" style="-fx-background-color: #f0f2f5; -fx-padding: 15;">
+                    <children>
+                        <Label fx:id="welcomeLabel" text="Welcome!" style="-fx-font-size: 18; -fx-font-weight: bold;" HBox.hgrow="ALWAYS" />
+
+                        <Button fx:id="viewProfileButton" mnemonicParsing="false" onAction="#handleViewProfile" text="👤 View Profile" style="-fx-background-color: #1877f2; -fx-text-fill: white; -fx-font-weight: bold;" />
+
+                        <Button fx:id="createPostButton" mnemonicParsing="false" onAction="#handleCreatePost" text="➕ Create Post" style="-fx-background-color: #42b72a; -fx-text-fill: white; -fx-font-weight: bold;" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </top>
+
+    <center>
+        <!-- Main Content Area (switches between Feed and Profile) -->
+        <ScrollPane fx:id="mainScrollPane" fitToWidth="true" style="-fx-background-color: #f0f2f5;" BorderPane.alignment="CENTER">
+            <content>
+                <VBox fx:id="contentContainer" spacing="15.0" style="-fx-background-color: #f0f2f5;">
+                    <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                    </padding>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </center>
+</BorderPane>
