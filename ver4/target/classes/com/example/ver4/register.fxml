@@ -7,10 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="500.0" prefWidth="800.0" stylesheets="@style.css"
-            xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.ver4.controllers.RegisterController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ver4.controllers.RegisterController">
     <children>
         <Label alignment="CENTER" layoutY="26.0" prefHeight="46.0" prefWidth="800.0" text="Register Your Account">
             <font>
@@ -31,11 +28,12 @@
         <TextField fx:id="phoneField" layoutX="100.0" layoutY="330.0" prefHeight="40.0" prefWidth="250.0" promptText="Phone Number" styleClass="input-field" />
         <TextField fx:id="addressField" layoutX="400.0" layoutY="330.0" prefHeight="40.0" prefWidth="250.0" promptText="Address" styleClass="input-field" />
 
-        <Button fx:id="registerButton" layoutX="100.0" layoutY="395.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="235.0"
-                styleClass="register-button" text="Register" onAction="#handleRegister" />
-        <Button fx:id="backButton" layoutX="400.0" layoutY="395.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="242.0"
-                styleClass="back-button" text="Back to Login" onAction="#handleBackToLogin" />
+        <Button fx:id="registerButton" layoutX="100.0" layoutY="395.0" mnemonicParsing="false" onAction="#handleRegister" prefHeight="16.0" prefWidth="235.0" styleClass="register-button" text="Register" />
+        <Button fx:id="backButton" layoutX="400.0" layoutY="395.0" mnemonicParsing="false" onAction="#handleBackToLogin" prefHeight="26.0" prefWidth="242.0" styleClass="back-button" text="Back to Login" />
 
-        <Label fx:id="messageLabel" layoutX="100.0" layoutY="440.0" textFill="RED" visible="false" wrapText="true" />
+        <Label fx:id="messageLabel" alignment="CENTER" layoutX="-1.0" layoutY="460.0" prefHeight="18.0" prefWidth="800.0" textFill="RED" visible="false" wrapText="true">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
     </children>
 </AnchorPane>

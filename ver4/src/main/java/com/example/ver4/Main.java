@@ -50,21 +50,21 @@ public class Main extends Application {
     public static void showCreatePostScreen() throws Exception {
         Parent root = FXMLLoader.load(Main.class.getResource("createPost.fxml"));
         primaryStage.setTitle("PostHub - Create Post");
-        primaryStage.setScene(new Scene(root, 500, 400));
+        primaryStage.setScene(new Scene(root, 800, 600));
         primaryStage.show();
     }
 
     public static void showPostDetailScreen() throws Exception {
         Parent root = FXMLLoader.load(Main.class.getResource("postDetail.fxml"));
         primaryStage.setTitle("PostHub - Post Details");
-        primaryStage.setScene(new Scene(root, 700, 600));
+        primaryStage.setScene(new Scene(root, 800, 700));
         primaryStage.show();
     }
 
     public static void showEditProfileScreen() throws Exception {
         Parent root = FXMLLoader.load(Main.class.getResource("editProfile.fxml"));
         primaryStage.setTitle("PostHub - Edit Profile");
-        primaryStage.setScene(new Scene(root, 500, 600));
+        primaryStage.setScene(new Scene(root, 800, 600));
         primaryStage.show();
     }
 
